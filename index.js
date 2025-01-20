@@ -31,6 +31,13 @@ app.use(
 
 app.disable("x-powered-by"); // deshabilitar el header X-Powered-By: Express
 
+
+app.get("/", (req, res) => {
+  const { genre } = req.query; ////n para recuperar parametros por la url 
+  
+  res.json({ datos: "todas la peliculas" });
+});
+
 app.get("/movies", (req, res) => {
   const { genre } = req.query; ////n para recuperar parametros por la url 
   if (genre) {
