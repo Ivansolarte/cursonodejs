@@ -2,7 +2,7 @@ import express, { json } from "express";
 import { randomUUID } from "node:crypto";
 import cors from "cors";
 
-const { validateMovie, validatePartialMovie } = require('./schemas/movies')
+import { validateMovie, validatePartialMovie } from './schemas/movies.schemas.js'
 
 const app = express();
 app.use(express.json());
